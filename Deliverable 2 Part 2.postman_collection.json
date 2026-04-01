@@ -1,0 +1,182 @@
+{
+  "info": {
+    "_postman_id": "3b8b2978-b496-456a-91f6-66cb2006993a",
+    "name": "DB Project Deliverable 2 Part 2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53216144",
+    "_collection_link": "https://go.postman.co/collection/53216144-3b8b2978-b496-456a-91f6-66cb2006993a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "getMovies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/movies",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "movies"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "searchDirector",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/movies/director?name=Christopher Nolan",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "movies",
+            "director"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "Christopher Nolan"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getRatings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/movies/ratings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "movies",
+            "ratings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "addMovie",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"The beekeeper\",\r\n  \"release_year\": 2024,\r\n  \"genre_id\": 1,\r\n  \"description\": \"A spy living his retired life as a beekeeper\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/movies",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "movies"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "addReview",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": 1,\r\n  \"movie_id\": 1,\r\n  \"rating\": 9,\r\n  \"review_text\": \"Great movie\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/reviews/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "reviews",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateReview",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"rating\": 10,\r\n  \"review_text\": \"Definitely rewatching\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/reviews/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "reviews",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteReview",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/reviews/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "reviews",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
