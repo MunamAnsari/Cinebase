@@ -45,6 +45,8 @@ Make sure you have installed:
 ### Run the server
 - node server.js
 
+### Test with Postman
+
 
 
 
